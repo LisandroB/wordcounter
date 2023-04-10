@@ -1,8 +1,5 @@
 def letterCounter(word):
-    list = 0;
+    dict = {};
     for letter in word:
-        if letter == " ":
-            continue;
-        else:
-            list+=1;
-    return list;
+        dict[letter] = word.count(letter)
+    return dict;

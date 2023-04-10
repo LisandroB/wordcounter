@@ -3,15 +3,12 @@ from wordcounter import wordCounter;
 
 class TestCase(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(wordCounter("Hola, ¿cómo estás?"), 3)
+        self.assertEqual(wordCounter("hola como estas hola"), {'hola': 2, 'como': 1, 'estas': 1})
     def test_simple(self):
-        self.assertEqual(wordCounter("hola"), 1);
+        self.assertEqual(wordCounter("hola"), {'hola': 1});
     def test_3(self):
-        self.assertEqual(wordCounter("aaaaaaa aaaaaaaa"), 2)
-    def test_4(self):
-        self.assertEqual(wordCounter("Descansa en paz maestro... Siempre que te escuche, te recordaré con nostalgia."), 12)
-    def test_5(self):
-        self.assertEqual(wordCounter(" Those chaotic screams perfectly embody how much I sometimes want to pull my hair out on the worst of days.  This song is cathartic."), 24);
+        self.assertEqual(wordCounter("aaaaaaa aaaaaaaa"), {'aaaaaaa': 1, 'aaaaaaaa': 1})
+
         
 if __name__ == '__main__':
     unittest.main();

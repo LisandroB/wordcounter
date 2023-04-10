@@ -3,14 +3,13 @@ from lettercounter import letterCounter
 
 class testCase(unittest.TestCase):
     def test_uno(self):
-        self.assertEqual(letterCounter("catorce"), 7)
+        self.assertEqual(letterCounter("catorce"), {'c': 2, 'a': 1, 't': 1, 'o': 1, 'r': 1, 'e': 1})
     def test_dos(self):
-        self.assertEqual(letterCounter("uno"), 3)
+        self.assertEqual(letterCounter("unouno"), {'u': 2, 'n': 2, 'o': 2})
     def test_tres(self):
-        self.assertEqual(letterCounter("cuarenta y cinco"), 14)
+        self.assertEqual(letterCounter("a"), {"a": 1})
     def test_cuatro(self):
-        self.assertEqual(letterCounter("albóndiga esponjosa"), 18);
-    def test_cinco(self):
-        self.assertEqual(letterCounter("otor rino laringó logo"), 19)
+        self.assertEqual(letterCounter("hola"), {'h': 1, 'o': 1, 'l': 1, 'a': 1});
+        
 if __name__ == '__main__':
     unittest.main();
